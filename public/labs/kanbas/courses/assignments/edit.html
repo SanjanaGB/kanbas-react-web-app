@@ -2,27 +2,147 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        p {
-            background-color: blue;
-            color: white;
-        }
-    </style>
 </head>
 <body>
-<h1>Cascading Style Sheets (CSS)</h1>
-<h2>Style attribute and tag</h2>
-<h3>Style attribute</h3>
-<p style="background-color: blue; color: white">
-    Style attribute allows configuring look and feel right on the element. Although it's very convenient it is considered bad practice and you should avoid using the style attribute
-</p>
-<h3>Style tag</h3>
-<p>
-    A slightly better way to configure look and feel
-    is to declare CSS rules in the STYLE tag in the
-    header and then refer to the tag by their name,
-    ID, or class This paragraph's style is set by a
-    rule referring to the P tags
-</p>
+<table border="0" width="100%">
+    <tr>
+        <th style='text-align:left'>
+            <ul>
+                <li><a href="../../profile/index.html" >Account</a></li>
+                <li><a href="#">Dashboard</a> </li>
+                <li><a href="#">Courses</a> </li>
+                <li><a href="#">Calendar</a> </li>
+                <li><a href="#">Inbox</a> </li>
+                <li><a href="#">History</a> </li>
+                <li><a href="#">Studio</a> </li>
+                <li><a href="#">Commons</a> </li>
+                <li><a href="#">Help</a> </li>
+            </ul>
+        </th>
+        <th style='text-align:left'>
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="#">Modules</a> </li>
+                <li><a href="#">Piazza</a> </li>
+                <li><a href="#">Zoom Meeting</a> </li>
+                <li><a href="index.html">Assignments</a> </li>
+                <li><a href="#">Quizzes</a> </li>
+                <li><a href="../grades/index.html">Grades</a> </li>
+                <li><a href="#">People</a> </li>
+                <li><a href="#">Panopto Video</a> </li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a> </li>
+                <li><a href="#">Pages</a> </li>
+                <li><a href="#">Files</a> </li>
+                <li><a href="#">Rubrics</a> </li>
+                <li><a href="#">Outcomes</a> </li>
+                <li><a href="#">Collaborations</a> </li>
+                <li><a href="#">Syllabus</a> </li>
+                <li><a href="../settings/courseDetails/index.htm">Settings</a> </li>
+            </ul>
+        </th>
+        <th style='text-align:left'>
+                <select>
+                    <option value="speedGrader" selected>Speed Grader</option>
+                </select>
+
+                <hr>
+
+                <h2>Assignment Name</h2>
+                <input id="text-fields-assignmentName" value="A1 - ENV+HTML" placeholder="Assignment Name"/><br/><br/>
+
+                <textarea cols="20"
+                          rows="2"
+                          title="tooltip">This is the assignment description
+                </textarea><br/><br/>
+
+                Points<br/>
+                <input type="number"
+                       id="text-field-point"
+                       placeholder="100"
+                       value="100"/><br/><br/>
+
+                Assignment Group<br/>
+                <select>
+                    <option value="assignments" selected>ASSIGNMENTS</option>
+                    <option value="quizzes">QUIZZES</option>
+                    <option value="exams">EXAMS</option>
+                    <option value="project">PROJECT</option>
+                </select><br/><br/>
+
+                Display Grade as<br/>
+                <select>
+                    <option value="percentage" selected>Percentage</option>
+                </select><br/><br/>
+
+                Submission Type<br>
+                <select>
+                    <option value="online" selected>Online</option>
+                </select><br/><br/>
+
+                Online Entry Option<br/>
+                <input type="checkbox" value="textEntry"
+                       name="check-online-entry-option" id="chkbox-text-entry" checked/>
+                <label for="chkbox-text-entry">Text Entry</label>    <br/>
+                <input type="checkbox" value="websiteURL"
+                       name="check-online-entry-option" id="chkbox-website-url"/>
+                <label for="chkbox-website-url">Website URL</label>    <br/>
+                <input type="checkbox" value="mediaRecordings"
+                       name="check-online-entry-option" id="chkbox-media-recordings" checked/>
+                <label for="chkbox-media-recordings">Media Recordings</label> <br/>
+                <input type="checkbox" value="studentAnnotation"
+                       name="check-online-entry-option" id="chkbox-student-annotation"/>
+                <label for="chkbox-student-annotation">Student Annotation</label> <br/>
+                <input type="checkbox" value="fileUploads"
+                       name="check-online-entry-option" id="chkbox-file-uploads"/>
+                <label for="chkbox-file-uploads">File Uploads</label> <br/><br/>
+
+                Submission Attempts<br/>
+                <select>
+                    <option value="unlimited" selected>Unlimited</option>
+                </select><br/><br/>
+
+                Plagarism Review<br/>
+                <select>
+                    <option value="none" selected>None</option>
+                </select><br/><br/>
+
+                Group Assignment<br/>
+                <input type="checkbox" value="groupAssignment"
+                       name="check-group-assignment" id="chkbox-group-assignment"/>
+                <label for="chkbox-group-assignment">This is a Group Assignment</label><br/><br/>
+
+                Peer Reviews<br/>
+                <input type="checkbox" value="peerReviews"
+                       name="check-peer-review" id="chkbox-peer-review"/>
+                <label for="chkbox-peer-review">Text Entry</label><br/><br/>
+
+                Assign<br/>
+                Assign To<br/>
+                <input id="text-fields-assignTo" value="Everyone"/><br/><br/>
+                <label for="text-fields-due">
+                    Due
+                </label><br/>
+                <input type="date"
+                       id="text-fields-due"
+                       value="2000-01-21"/><br/><br/>
+                <label for="text-fields-from">
+                    Available From
+                </label><br/>
+                <input type="date"
+                       id="text-fields-from"
+                       value="2000-01-21"/><br/><br/>
+                <label for="text-fields-to">
+                    Until
+                </label><br/>
+                <input type="date"
+                       id="text-fields-to"
+                       value="2000-01-21"/><br/><br/>
+
+                <a href="index.html"><button type="button">Cancel</button></a>
+                <a href="index.html"><button type="button">Save</button></a>
+        </th>
+    </tr>
+    </table>
 </body>
 </html>
