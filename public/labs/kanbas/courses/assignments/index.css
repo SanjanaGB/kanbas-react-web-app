@@ -1,0 +1,20 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.sub-link {
+    color: grey;
+    text-decoration: none;
+}
+
+.wd-rounded-corners-all-around {
+    border-radius: 50px;
+}
+
+.wd-border-thin {
+    border-width: 4px; }
+
+.wd-border-solid {
+    border-style: solid; }
+

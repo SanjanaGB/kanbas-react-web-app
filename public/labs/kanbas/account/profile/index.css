@@ -1,0 +1,27 @@
+.edit-profile-column {
+    vertical-align: top;
+    horiz-align: right;
+}
+
+td {
+    padding: 0px;
+    vertical-align: top;
+}
+
+tr {
+    height: 100%;
+}
+
+.border-profile-pic {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 50%; /* Make it circular */
+    padding: 12px;
+    margin: 5px; /* Add some margin for spacing */
+}
+
+.align-bottom-button {
+    text-align: center;
+}

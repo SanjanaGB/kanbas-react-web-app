@@ -1,0 +1,35 @@
+.wd-account.list-group {
+    border-radius: 0%;
+    border-color: white;
+}
+.wd-account.list-group > .list-group-item {
+    background-color: white;
+    border-color: white;
+    text-align: left;
+    padding: 10px 20px 0px;
+    margin-left: 10px;
+}
+
+.wd-account.list-group > .list-group-item {
+    color: red;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.wd-account.list-group > .list-group-item.active {
+    background-color: white;
+    border-color: white;
+    border-left-color: black;
+    color: black;
+}
+
+
+.wd-account-navigation-column {
+    min-width: 190px;
+    max-width: 200px;
+    vertical-align: top;
+}
+
+.wd-account-navigation-fix{
+    position: fixed;
+}

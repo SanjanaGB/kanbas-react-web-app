@@ -1,0 +1,12 @@
+.row {
+    padding-bottom: 15px;
+    padding-right: 100px;
+}
+
+.nav-link {
+    color: red;
+}
+
+.nav-link.active {
+    color: grey;
+}

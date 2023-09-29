@@ -2,152 +2,214 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="../../../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+    <link href="../../../css/courseNavigation.css" rel="stylesheet"/>
+    <link href="../../../css/kanbasNavigation.css" rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet"/>
 </head>
 <body>
-<table border="0" width="100%">
-    <tr>
-        <th style='text-align:left'>
-            <ul>
-                <li><a href="../../../profile/index.html" >Account</a></li>
-                <li><a href="#">Dashboard</a> </li>
-                <li><a href="#">Courses</a> </li>
-                <li><a href="#">Calendar</a> </li>
-                <li><a href="#">Inbox</a> </li>
-                <li><a href="#">History</a> </li>
-                <li><a href="#">Studio</a> </li>
-                <li><a href="#">Commons</a> </li>
-                <li><a href="#">Help</a> </li>
-            </ul>
-        </th>
-        <th style='text-align:left'>
-            <ul>
-                <li><a href="../../home/index.html">Home</a></li>
-                <li><a href="#">Modules</a> </li>
-                <li><a href="#">Piazza</a> </li>
-                <li><a href="#">Zoom Meeting</a> </li>
-                <li><a href="../../assignments/index.html">Assignments</a> </li>
-                <li><a href="#">Quizzes</a> </li>
-                <li><a href="../../grades/index.html">Grades</a> </li>
-                <li><a href="#">People</a> </li>
-                <li><a href="#">Panopto Video</a> </li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a> </li>
-                <li><a href="#">Pages</a> </li>
-                <li><a href="#">Files</a> </li>
-                <li><a href="#">Rubrics</a> </li>
-                <li><a href="#">Outcomes</a> </li>
-                <li><a href="#">Collaborations</a> </li>
-                <li><a href="#">Syllabus</a> </li>
-                <li><a href="../courseDetails/index.html">Settings</a> </li>
-            </ul>
-        </th>
-        <th style='text-align:left'>
-            <a href="../courseDetails/index.html"><button type="button">Course Details</button></a>
-            <button type="button">Sections</button>
-            <a href="index.html"><button type="button">Navigations</button></a>
-            <button type="button">Apps</button>
-            <button type="button">Feature Options</button>
-            <button type="button">Integrations</button>
+<div>
+    <div class="row">
+        <div class="col wd-kanbas-navigation-column d-none d-md-block">
+            <div class="wd-kanbas list-group wd-kanbas-navigation-fix" style="position: fixed;">
+                <a href="../../../account/profile/index.html" class="list-group-item">
+                    <i class="fa fa-user"></i><br/>
+                    Account
+                </a>
+                <a href="../../../dashboard/index.html" class="list-group-item">
+                    <i class="fa fa-graduation-cap"></i><br/>
+                    Dashboard
+                </a>
+                <a href="index.html" class="list-group-item active">
+                    <i class="fa fa-book"></i><br/>
+                    Courses</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-calendar"></i><br/>
+                    Calendar
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-inbox"></i><br/>
+                    Inbox</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-clock"></i><br/>
+                    History</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-desktop"></i><br/>
+                    Studio</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-arrow-right"></i><br/>
+                    Commons</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-question"></i><br/>
+                    Help</a>
+            </div>
+        </div>
+        <div class="col wd-course-navigation-column d-none d-md-block">
+            <div class="wd-course list-group wd-course-navigation-fix">
+                <a href="../../home/index.html" class="list-group-item">Home</a>
+                <a href="#" class="list-group-item">Modules</a>
+                <a href="#" class="list-group-item">Piazza</a>
+                <a href="#" class="list-group-item">Zoom Meeting</a>
+                <a href="../../assignments/index.html" class="list-group-item">Assignments</a>
+                <a href="#" class="list-group-item">Quizzes</a>
+                <a href="../../grades/index.html" class="list-group-item">Grades</a>
+                <a href="#" class="list-group-item">People</a>
+                <a href="#" class="list-group-item">Panopto Video</a>
+                <a href="#" class="list-group-item">Discussions</a>
+                <a href="#" class="list-group-item">Announcements</a>
+                <a href="#" class="list-group-item">Pages</a>
+                <a href="#" class="list-group-item">Files</a>
+                <a href="#" class="list-group-item">Rubrics</a>
+                <a href="#" class="list-group-item">Outcomes</a>
+                <a href="#" class="list-group-item">Collaborations</a>
+                <a href="#" class="list-group-item">Syllabus</a>
+                <a href="index.html" class="list-group-item active">Settings</a>
+            </div>
+        </div>
+        <div class="col">
+            <br/>
             <hr>
-            Drag and drop items to reorder them in course navigation<br/>
-            <table border="1" width="50%">
-                <tr>
-                <td>
-                    Chat
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    SCORM
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    Attendance
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    Barnes and Noble Bookstore
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    Digcation
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    Top Hat
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    Syllabus
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    Perusall
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    Microsoft Teams
-                </td>
-                </tr>
-            </table>
-            Drag and drop items to hide from students
-            <table border="1" width="50%">
-                <tr>
-                    <td>
-                        Home
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Modules
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Piazza
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Zoom Meetings
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Assignments
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Quizzes
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Grades
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        People
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Panopto Video
-                    </td>
-                </tr>
-            </table>
-
-        </th>
-    </tr>
-</table>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="../courseDetails/index.html">Course Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sections</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Navigations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Apps</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Feature Options</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Integrations</a>
+                </li>
+            </ul>
+            <br/>
+            <br/>
+            <div style="padding-right: 300px;">
+            Drag and drop items to reorder them in course navigation<br/><br/>
+            <table class="table border">
+                    <tr>
+                        <td>
+                            Home
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Modules
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Piazza
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Zoom Meetings
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Assignments
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Quizzes
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Grades
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            People
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Panopto Video
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                </table>
+            Drag and drop items to hide from students<br/><br/>
+            <table class="table border">
+                    <tr>
+                        <td>
+                            Chat
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            SCORM
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Attendance
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Barnes and Noble Bookstore
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Digication
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Top Hat
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Syllabus
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Perusall
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Microsoft Teams
+                            <div class="float-end"><i class="fas fa-ellipsis-v"></i></div>
+                        </td>
+                    </tr>
+                </table><br/>
+            </div>
+            <button type="button" class="btn btn-danger">Save</button>
+        </div >
+    </div >
+</div>
 </body>
 </html>

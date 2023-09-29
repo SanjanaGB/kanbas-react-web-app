@@ -2,147 +2,246 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="../../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet"/>
+    <link href="../../css/courseNavigation.css" rel="stylesheet"/>
+    <link href="../../css/kanbasNavigation.css" rel="stylesheet"/>
 </head>
 <body>
-<table border="0" width="100%">
-    <tr>
-        <th style='text-align:left'>
-            <ul>
-                <li><a href="../../profile/index.html" >Account</a></li>
-                <li><a href="#">Dashboard</a> </li>
-                <li><a href="#">Courses</a> </li>
-                <li><a href="#">Calendar</a> </li>
-                <li><a href="#">Inbox</a> </li>
-                <li><a href="#">History</a> </li>
-                <li><a href="#">Studio</a> </li>
-                <li><a href="#">Commons</a> </li>
-                <li><a href="#">Help</a> </li>
-            </ul>
-        </th>
-        <th style='text-align:left'>
-            <ul>
-                <li><a href="../home/index.html">Home</a></li>
-                <li><a href="#">Modules</a> </li>
-                <li><a href="#">Piazza</a> </li>
-                <li><a href="#">Zoom Meeting</a> </li>
-                <li><a href="index.html">Assignments</a> </li>
-                <li><a href="#">Quizzes</a> </li>
-                <li><a href="../grades/index.html">Grades</a> </li>
-                <li><a href="#">People</a> </li>
-                <li><a href="#">Panopto Video</a> </li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a> </li>
-                <li><a href="#">Pages</a> </li>
-                <li><a href="#">Files</a> </li>
-                <li><a href="#">Rubrics</a> </li>
-                <li><a href="#">Outcomes</a> </li>
-                <li><a href="#">Collaborations</a> </li>
-                <li><a href="#">Syllabus</a> </li>
-                <li><a href="../settings/courseDetails/index.htm">Settings</a> </li>
-            </ul>
-        </th>
-        <th style='text-align:left'>
-                <select>
-                    <option value="speedGrader" selected>Speed Grader</option>
+<div>
+    <div class="row">
+        <div class="col wd-kanbas-navigation-column">
+            <div class="wd-kanbas list-group wd-kanbas-navigation-fix">
+                <a href="../../account/profile/index.html" class="list-group-item">
+                    <i class="fa fa-user"></i><br/>
+                    Account
+                </a>
+                <a href="../../dashboard/index.html" class="list-group-item">
+                    <i class="fa fa-graduation-cap"></i></i><br/>
+                    Dashboard
+                </a>
+                <a href="edit.html" class="list-group-item active">
+                    <i class="fa fa-book"></i><br/>
+                    Courses</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-calendar"></i><br/>
+                    Calendar
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-inbox"></i><br/>
+                    Inbox</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-clock"></i><br/>
+                    History</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-desktop"></i><br/>
+                    Studio</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-arrow-right"></i><br/>
+                    Commons</a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-question"></i><br/>
+                    Help</a>
+            </div>
+        </div>
+        <div class="col wd-course-navigation-column">
+            <div class="wd-course list-group wd-course-navigation-fix">
+                <a href="../home/index.html" class="list-group-item">Home</a>
+                <a href="#" class="list-group-item">Modules</a>
+                <a href="#" class="list-group-item">Piazza</a>
+                <a href="#" class="list-group-item">Zoom Meeting</a>
+                <a href="index.html" class="list-group-item active">Assignments</a>
+                <a href="#" class="list-group-item">Quizzes</a>
+                <a href="../grades/index.html" class="list-group-item">Grades</a>
+                <a href="#" class="list-group-item">People</a>
+                <a href="#" class="list-group-item">Panopto Video</a>
+                <a href="#" class="list-group-item">Discussions</a>
+                <a href="#" class="list-group-item">Announcements</a>
+                <a href="#" class="list-group-item">Pages</a>
+                <a href="#" class="list-group-item">Files</a>
+                <a href="#" class="list-group-item">Rubrics</a>
+                <a href="#" class="list-group-item">Outcomes</a>
+                <a href="#" class="list-group-item">Collaborations</a>
+                <a href="#" class="list-group-item">Syllabus</a>
+                <a href="../settings/courseDetails/index.html" class="list-group-item">Settings</a>
+            </div>
+        </div>
+        <div class="col p-5">
+            <hr>
+            <div class="float-end">
+            <i class="fas fa-check-square" style="color: green;"></i> <font color="green">Published</font>
+                <select class="btn btn-secondary">
+                    <option value="speedGrader" selected>&#xf142;</option>
                 </select>
+            </div><br/>
 
                 <hr>
 
-                <h2>Assignment Name</h2>
-                <input id="text-fields-assignmentName" value="A1 - ENV+HTML" placeholder="Assignment Name"/><br/><br/>
+                <h4>Assignment Name</h4>
+                <input class="form-control" id="text-fields-assignmentName" value="A1 - ENV+HTML" placeholder="Assignment Name"/><br/><br/>
 
-                <textarea cols="20"
+                <textarea class="form-control" cols="20"
                           rows="2"
                           title="tooltip">This is the assignment description
-                </textarea><br/><br/>
+                </textarea>
 
-                Points<br/>
-                <input type="number"
-                       id="text-field-point"
-                       placeholder="100"
-                       value="100"/><br/><br/>
+            <div class="p-lg-5">
+                <div class="p-lg-4">
+                <div class="row">
+                    <div class="col col-3" style="text-align: right;">
+                        Points
+                    </div>
+                    <div class="col col-9">
+                        <input class="form-control" type="number"
+                               id="text-field-point"
+                               placeholder="100"
+                               value="100"/><br/><br/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3" style="text-align: right;">
+                        Assignment Group
+                    </div>
+                    <div class="col col-9">
+                        <select class="form-select">
+                            <option value="assignments" selected>ASSIGNMENTS</option>
+                            <option value="quizzes">QUIZZES</option>
+                            <option value="exams">EXAMS</option>
+                            <option value="project">PROJECT</option>
+                        </select><br/><br/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3" style="text-align: right;">
+                        Display Grade as
+                    </div>
+                    <div class="col col-9">
+                        <select class="form-select">
+                            <option value="percentage" selected>Percentage</option>
+                        </select><br/>
+                        <input class="form-check-input" type="checkbox" value="peerReviews"
+                               name="check-peer-review" id="chkbox-count-grade"/>
+                        <label class="form-check-label" for="chkbox-count-grade">Do not count this assignment towards final grade</label><br/><br/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3" style="text-align: right;">
+                        Submission Type<br>
+                    </div>
+                    <div class="col col-9 border p-3">
+                        <select class="form-select">
+                        <option value="online" selected>Online</option>
+                        </select><br/>
+                        <div class="form-check">
+                        <h6 style="text-align: left;">Online Entry Option</h6>
+                        <input class="form-check-input" type="checkbox" value="textEntry"
+                               name="check-online-entry-option" id="chkbox-text-entry" checked/>
+                        <label for="chkbox-text-entry">Text Entry</label>    <br/>
+                        <input class="form-check-input" type="checkbox" value="websiteURL"
+                               name="check-online-entry-option" id="chkbox-website-url"/>
+                        <label for="chkbox-website-url">Website URL</label>    <br/>
+                        <input class="form-check-input" type="checkbox" value="mediaRecordings"
+                               name="check-online-entry-option" id="chkbox-media-recordings" checked/>
+                        <label for="chkbox-media-recordings">Media Recordings</label> <br/>
+                        <input class="form-check-input" type="checkbox" value="studentAnnotation"
+                               name="check-online-entry-option" id="chkbox-student-annotation"/>
+                        <label for="chkbox-student-annotation">Student Annotation</label> <br/>
+                        <input class="form-check-input" type="checkbox" value="fileUploads"
+                               name="check-online-entry-option" id="chkbox-file-uploads"/>
+                        <label for="chkbox-file-uploads">File Uploads</label>
+                        </div>
+                    </div>
+                </div><br/>
+                <div class="row">
+                <div class="col col-3" style="text-align: right;">
+                    Submission Attempts
+                </div>
+                <div class="col col-9">
+                    <select class="form-select">
+                        <option value="unlimited" selected>Unlimited</option>
+                    </select><br/><br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-3" style="text-align: right;">
+                    Plagarism Review
+                </div>
+                <div class="col col-9">
+                    <select class="form-select">
+                        <option value="none" selected>None</option>
+                    </select><br/><br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-3" style="text-align: right;">
+                    Group Assignment
+                </div>
+                <div class="col col-9">
+                    <input class="form-check-input" type="checkbox" value="groupAssignment"
+                           name="check-group-assignment" id="chkbox-group-assignment"/>
+                    <label class="form-check-label" for="chkbox-group-assignment">This is a Group Assignment</label>
+                </div><br/><br/>
+            </div>
+            <div class="row">
+                <div class="col col-3" style="text-align: right;">
+                    Peer Reviews
+                </div>
+                <div class="col col-9">
+                    <input class="form-check-input" type="checkbox" value="peerReviews"
+                           name="check-peer-review" id="chkbox-peer-review"/>
+                    <label class="form-check-label" for="chkbox-peer-review">Text Entry</label><br/><br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-3" style="text-align: right;">
+                    Assign
+                </div>
+                <div class="col col-9 border p-2">
+                    <label for="text-fields-assignTo">
+                        AssignTo
+                    </label><br/>
+                    <input class="form-control" id="text-fields-assignTo" value="Everyone"/><br/>
+                    <label for="text-fields-due">
+                        Due
+                    </label><br/>
+                    <input class="form-control" type="date"
+                           id="text-fields-due"
+                           value="2000-01-21"/><br/>
+                    <div class="row">
+                        <div class="col">
+                            <label for="text-fields-from">
+                                Available From
+                            </label><br/>
+                            <input class="form-control" type="date"
+                                   id="text-fields-from"
+                                   value="2000-01-21"/><br/>
+                        </div>
+                        <div class="col">
+                            <label for="text-fields-to">
+                                Until
+                            </label><br/>
+                            <input class="form-control" type="date"
+                                   id="text-fields-to"
+                                   value="2000-01-21"/>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary" style="width: 100%;"><i class="fas fa-plus" style="color: #ffffff;"></i> Add</button>
 
-                Assignment Group<br/>
-                <select>
-                    <option value="assignments" selected>ASSIGNMENTS</option>
-                    <option value="quizzes">QUIZZES</option>
-                    <option value="exams">EXAMS</option>
-                    <option value="project">PROJECT</option>
-                </select><br/><br/>
-
-                Display Grade as<br/>
-                <select>
-                    <option value="percentage" selected>Percentage</option>
-                </select><br/><br/>
-
-                Submission Type<br>
-                <select>
-                    <option value="online" selected>Online</option>
-                </select><br/><br/>
-
-                Online Entry Option<br/>
-                <input type="checkbox" value="textEntry"
-                       name="check-online-entry-option" id="chkbox-text-entry" checked/>
-                <label for="chkbox-text-entry">Text Entry</label>    <br/>
-                <input type="checkbox" value="websiteURL"
-                       name="check-online-entry-option" id="chkbox-website-url"/>
-                <label for="chkbox-website-url">Website URL</label>    <br/>
-                <input type="checkbox" value="mediaRecordings"
-                       name="check-online-entry-option" id="chkbox-media-recordings" checked/>
-                <label for="chkbox-media-recordings">Media Recordings</label> <br/>
-                <input type="checkbox" value="studentAnnotation"
-                       name="check-online-entry-option" id="chkbox-student-annotation"/>
-                <label for="chkbox-student-annotation">Student Annotation</label> <br/>
-                <input type="checkbox" value="fileUploads"
-                       name="check-online-entry-option" id="chkbox-file-uploads"/>
-                <label for="chkbox-file-uploads">File Uploads</label> <br/><br/>
-
-                Submission Attempts<br/>
-                <select>
-                    <option value="unlimited" selected>Unlimited</option>
-                </select><br/><br/>
-
-                Plagarism Review<br/>
-                <select>
-                    <option value="none" selected>None</option>
-                </select><br/><br/>
-
-                Group Assignment<br/>
-                <input type="checkbox" value="groupAssignment"
-                       name="check-group-assignment" id="chkbox-group-assignment"/>
-                <label for="chkbox-group-assignment">This is a Group Assignment</label><br/><br/>
-
-                Peer Reviews<br/>
-                <input type="checkbox" value="peerReviews"
-                       name="check-peer-review" id="chkbox-peer-review"/>
-                <label for="chkbox-peer-review">Text Entry</label><br/><br/>
-
-                Assign<br/>
-                Assign To<br/>
-                <input id="text-fields-assignTo" value="Everyone"/><br/><br/>
-                <label for="text-fields-due">
-                    Due
-                </label><br/>
-                <input type="date"
-                       id="text-fields-due"
-                       value="2000-01-21"/><br/><br/>
-                <label for="text-fields-from">
-                    Available From
-                </label><br/>
-                <input type="date"
-                       id="text-fields-from"
-                       value="2000-01-21"/><br/><br/>
-                <label for="text-fields-to">
-                    Until
-                </label><br/>
-                <input type="date"
-                       id="text-fields-to"
-                       value="2000-01-21"/><br/><br/>
-
-                <a href="index.html"><button type="button">Cancel</button></a>
-                <a href="index.html"><button type="button">Save</button></a>
-        </th>
-    </tr>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+            <hr><br/>
+            <input class="form-check-input" type="checkbox" value="peerReviews"
+                   name="check-peer-review" id="chkbox-notify-users"/>
+            <label class="form-check-label" for="chkbox-notify-users">Notify users that content has changed</label>
+            <div style="text-align: right; padding-right: 5px;">
+                <a href="index.html"><button type="button" class="btn btn-secondary">Cancel</button></a>
+                <a href="index.html"><button type="button" class="btn btn-danger">Save</button></a>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
