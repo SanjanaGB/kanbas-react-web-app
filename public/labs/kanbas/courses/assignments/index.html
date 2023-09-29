@@ -10,7 +10,7 @@
 </head>
 <body>
 <div>
-    <div class="row">
+    <div class="row" style="height: 100%;">
         <div class="col wd-kanbas-navigation-column d-none d-md-block">
             <div class="wd-kanbas list-group wd-kanbas-navigation-fix">
                 <a href="../../account/profile/index.html" class="list-group-item">
@@ -45,148 +45,163 @@
                     Help</a>
             </div>
         </div>
-        <div  class="col wd-course-navigation-column d-none d-md-block">
-            <div class="wd-course list-group wd-course-navigation-fix">
-                <a href="../home/index.html" class="list-group-item">Home</a>
-                <a href="#" class="list-group-item">Modules</a>
-                <a href="#" class="list-group-item">Piazza</a>
-                <a href="#" class="list-group-item">Zoom Meeting</a>
-                <a href="index.html" class="list-group-item active">Assignments</a>
-                <a href="#" class="list-group-item">Quizzes</a>
-                <a href="../grades/index.html" class="list-group-item">Grades</a>
-                <a href="#" class="list-group-item">People</a>
-                <a href="#" class="list-group-item">Panopto Video</a>
-                <a href="#" class="list-group-item">Discussions</a>
-                <a href="#" class="list-group-item">Announcements</a>
-                <a href="#" class="list-group-item">Pages</a>
-                <a href="#" class="list-group-item">Files</a>
-                <a href="#" class="list-group-item">Rubrics</a>
-                <a href="#" class="list-group-item">Outcomes</a>
-                <a href="#" class="list-group-item">Collaborations</a>
-                <a href="#" class="list-group-item">Syllabus</a>
-                <a href="../settings/courseDetails/index.html" class="list-group-item">Settings</a>
+        <div class="col">
+            <div class="row" style="padding-left: 20px; width: 100%;">
+                <div class="col-1" style="padding-top: 20px;">
+                    <i class="fas fa-bars fa-lg" style="color: #e01515;"></i>
+                </div>
+                <div class="col-11" style="padding-top: 20px;">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../home/index.html" style="color: red;">CS5610.FALL2023.SEC</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                        </ol>
+                    </nav>
+                </div>
+                <br/><hr>
             </div>
-        </div>
-        <div class="col p-5">
-            <br/>
-            <hr>
             <div class="row">
-                <div class="col">
-                <div class="w-25" style="float: left; ">
-                <input class="form-control" id="text-field-search" placeholder="Search for Assignments"/>
+                <div  class="col wd-course-navigation-column d-none d-md-block">
+                    <div class="wd-course list-group wd-course-navigation-fix">
+                        <a href="../home/index.html" class="list-group-item">Home</a>
+                        <a href="#" class="list-group-item">Modules</a>
+                        <a href="#" class="list-group-item">Piazza</a>
+                        <a href="#" class="list-group-item">Zoom Meeting</a>
+                        <a href="index.html" class="list-group-item active">Assignments</a>
+                        <a href="#" class="list-group-item">Quizzes</a>
+                        <a href="../grades/index.html" class="list-group-item">Grades</a>
+                        <a href="#" class="list-group-item">People</a>
+                        <a href="#" class="list-group-item">Panopto Video</a>
+                        <a href="#" class="list-group-item">Discussions</a>
+                        <a href="#" class="list-group-item">Announcements</a>
+                        <a href="#" class="list-group-item">Pages</a>
+                        <a href="#" class="list-group-item">Files</a>
+                        <a href="#" class="list-group-item">Rubrics</a>
+                        <a href="#" class="list-group-item">Outcomes</a>
+                        <a href="#" class="list-group-item">Collaborations</a>
+                        <a href="#" class="list-group-item">Syllabus</a>
+                        <a href="../settings/courseDetails/index.html" class="list-group-item">Settings</a>
+                    </div>
                 </div>
-                <div class="float-end">
+                <div class="col" style="padding-right: 50px;">
+                    <div class="row">
+                        <div class="col">
+                        <div class="w-25" style="float: left; ">
+                        <input class="form-control" id="text-field-search" placeholder="Search for Assignments"/>
+                        </div>
+                        <div class="float-end">
 
-                    <button type="button" class="btn btn-secondary"><i class="fas fa-plus" style="color: #ffffff;"></i> Group</button>
+                            <button type="button" class="btn btn-secondary"><i class="fas fa-plus" style="color: #ffffff;"></i> Group</button>
 
-                    <button type="button" class="btn btn-danger"><i class="fas fa-plus" style="color: #ffffff;"></i> Assignment</button>
+                            <button type="button" class="btn btn-danger"><i class="fas fa-plus" style="color: #ffffff;"></i> Assignment</button>
 
-                    <select class="btn btn-secondary" style="width: 60px;">
-                        <option selected>&#xf142;</option>
-                        <option value="editAssignmentDates">Edit Assignment Dates</option>
-                        <option value="assignmentsGroupWeight">Assignment Group Weight</option>
-                        <option value="gradescope1.3">Gradescope 1.3</option>
-                        <option value="commonsFavorites">Commons Favorites</option>
-                    </select>
-                </div>
+                            <select class="btn btn-secondary" style="width: 60px;">
+                                <option selected>&#xf142;</option>
+                                <option value="editAssignmentDates">Edit Assignment Dates</option>
+                                <option value="assignmentsGroupWeight">Assignment Group Weight</option>
+                                <option value="gradescope1.3">Gradescope 1.3</option>
+                                <option value="commonsFavorites">Commons Favorites</option>
+                            </select>
+                        </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <br/>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i> Assignments
+                            <div class="float-end">
+                                <div class="wd-rounded-corners-all-around wd-border-black wd-border-solid p-1" style="float: left;">40% of Total</div>
+                                <div style="float: right;" class="p-1">
+                                    <select class="btn btn-secondary" style="width: 60px;">
+                                        <option value="" selected>&#xf142;</option>
+                                        <option value="edit">Edit</option>
+                                        <option value="speedGrader">Speed Grader</option>
+                                        <option value="duplicate">Duplicate</option>
+                                        <option value="delete">Delete</option>
+                                        <option value="moveTo">Move To</option>
+                                        <option value="sendTo">Send To</option>
+                                        <option value="copyTo">Copy To</option>
+                                        <option value="shareToCommons">Share to Commons</option>
+                                    </select>
+                                </div>
+                            </div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A1 - ENV+HTML</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A2 - CSS+BOOTSTRAP</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A3 - JS+REACT</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A4 - STATE+REDUX</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A5 - NODE+SESSION</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A6 - MONGO+MONGOOSE</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                    </ul>
+                    <br/>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i> Quizzes
+                            <div class="float-end">
+                                <div class="wd-rounded-corners-all-around wd-border-black wd-border-solid p-1" style="float: left;">10% of Total</div>
+                                <div style="float: right;" class="p-1">
+                                    <select class="btn btn-secondary" style="width: 60px;">
+                                        <option value="" selected>&#xf142;</option>
+                                        <option value="edit">Edit</option>
+                                        <option value="speedGrader">Speed Grader</option>
+                                        <option value="duplicate">Duplicate</option>
+                                        <option value="delete">Delete</option>
+                                        <option value="moveTo">Move To</option>
+                                        <option value="sendTo">Send To</option>
+                                        <option value="copyTo">Copy To</option>
+                                        <option value="shareToCommons">Share to Commons</option>
+                                    </select>
+                                </div>
+                            </div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q1 - HTML</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q2 - CSS</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q3 - JS,ES6</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q4 - NODE</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q5 - MONGO</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        </ul>
+                    <br/>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i> Exam
+                            <div class="float-end">
+                                <div class="wd-rounded-corners-all-around wd-border-black wd-border-solid p-1" style="float: left;">20% of Total</div>
+                                <div style="float: right;" class="p-1">
+                                    <select class="btn btn-secondary" style="width: 60px;">
+                                        <option value="" selected>&#xf142;</option>
+                                        <option value="edit">Edit</option>
+                                        <option value="speedGrader">Speed Grader</option>
+                                        <option value="duplicate">Duplicate</option>
+                                        <option value="delete">Delete</option>
+                                        <option value="moveTo">Move To</option>
+                                        <option value="sendTo">Send To</option>
+                                        <option value="copyTo">Copy To</option>
+                                        <option value="shareToCommons">Share to Commons</option>
+                                    </select>
+                                </div>
+                            </div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Midterm</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Final</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                    </ul>
+                    <br/>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action list-group-item-secondary"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i> Project
+                            <div class="float-end">
+                                <div class="wd-rounded-corners-all-around wd-border-black wd-border-solid p-1" style="float: left;">30% of Total</div>
+                                <div style="float: right;" class="p-1">
+                                    <select class="btn btn-secondary" style="width: 60px;">
+                                        <option value="" selected>&#xf142;</option>
+                                        <option value="edit">Edit</option>
+                                        <option value="speedGrader">Speed Grader</option>
+                                        <option value="duplicate">Duplicate</option>
+                                        <option value="delete">Delete</option>
+                                        <option value="moveTo">Move To</option>
+                                        <option value="sendTo">Send To</option>
+                                        <option value="copyTo">Copy To</option>
+                                        <option value="shareToCommons">Share to Commons</option>
+                                    </select>
+                                </div>
+                            </div></li>
+                        <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Project</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
+                    </ul>
                 </div>
             </div>
-
-            <hr>
-            <br/>
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-action list-group-item-secondary"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i> Assignments
-                    <div class="float-end">
-                        <div class="wd-rounded-corners-all-around wd-border-black wd-border-solid p-1" style="float: left;">40% of Total</div>
-                        <div style="float: right;" class="p-1">
-                            <select class="btn btn-secondary" style="width: 60px;">
-                                <option value="" selected>&#xf142;</option>
-                                <option value="edit">Edit</option>
-                                <option value="speedGrader">Speed Grader</option>
-                                <option value="duplicate">Duplicate</option>
-                                <option value="delete">Delete</option>
-                                <option value="moveTo">Move To</option>
-                                <option value="sendTo">Send To</option>
-                                <option value="copyTo">Copy To</option>
-                                <option value="shareToCommons">Share to Commons</option>
-                            </select>
-                        </div>
-                    </div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A1 - ENV+HTML</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A2 - CSS+BOOTSTRAP</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A3 - JS+REACT</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A4 - STATE+REDUX</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A5 - NODE+SESSION</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> A6 - MONGO+MONGOOSE</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-            </ul>
-            <br/>
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-action list-group-item-secondary"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i> Quizzes
-                    <div class="float-end">
-                        <div class="wd-rounded-corners-all-around wd-border-black wd-border-solid p-1" style="float: left;">10% of Total</div>
-                        <div style="float: right;" class="p-1">
-                            <select class="btn btn-secondary" style="width: 60px;">
-                                <option value="" selected>&#xf142;</option>
-                                <option value="edit">Edit</option>
-                                <option value="speedGrader">Speed Grader</option>
-                                <option value="duplicate">Duplicate</option>
-                                <option value="delete">Delete</option>
-                                <option value="moveTo">Move To</option>
-                                <option value="sendTo">Send To</option>
-                                <option value="copyTo">Copy To</option>
-                                <option value="shareToCommons">Share to Commons</option>
-                            </select>
-                        </div>
-                    </div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q1 - HTML</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q2 - CSS</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q3 - JS,ES6</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q4 - NODE</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Q5 - MONGO</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                </ul>
-            <br/>
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-action list-group-item-secondary"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i> Exam
-                    <div class="float-end">
-                        <div class="wd-rounded-corners-all-around wd-border-black wd-border-solid p-1" style="float: left;">20% of Total</div>
-                        <div style="float: right;" class="p-1">
-                            <select class="btn btn-secondary" style="width: 60px;">
-                                <option value="" selected>&#xf142;</option>
-                                <option value="edit">Edit</option>
-                                <option value="speedGrader">Speed Grader</option>
-                                <option value="duplicate">Duplicate</option>
-                                <option value="delete">Delete</option>
-                                <option value="moveTo">Move To</option>
-                                <option value="sendTo">Send To</option>
-                                <option value="copyTo">Copy To</option>
-                                <option value="shareToCommons">Share to Commons</option>
-                            </select>
-                        </div>
-                    </div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Midterm</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Final</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-            </ul>
-            <br/>
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-action list-group-item-secondary"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i> Project
-                    <div class="float-end">
-                        <div class="wd-rounded-corners-all-around wd-border-black wd-border-solid p-1" style="float: left;">30% of Total</div>
-                        <div style="float: right;" class="p-1">
-                            <select class="btn btn-secondary" style="width: 60px;">
-                                <option value="" selected>&#xf142;</option>
-                                <option value="edit">Edit</option>
-                                <option value="speedGrader">Speed Grader</option>
-                                <option value="duplicate">Duplicate</option>
-                                <option value="delete">Delete</option>
-                                <option value="moveTo">Move To</option>
-                                <option value="sendTo">Send To</option>
-                                <option value="copyTo">Copy To</option>
-                                <option value="shareToCommons">Share to Commons</option>
-                            </select>
-                        </div>
-                    </div></li>
-                <li class="list-group-item list-group-item-action"><i class="fas fa-ellipsis-v fa-xs"></i><i class="fas fa-ellipsis-v fa-xs"></i><a href="edit.html"> <i class="far fa-clipboard" style="color: green;"></i> Project</a><br><a class="sub-link" href="#">Multiple Modules</a> | Not available yet<div class="float-end"> <i class="fas fa-check-circle p-1" style="color: #1c9c2b;"></i><i class="fas fa-ellipsis-v fa-xs"></i></div></li>
-            </ul>
         </div>
     </div>
 </div>
