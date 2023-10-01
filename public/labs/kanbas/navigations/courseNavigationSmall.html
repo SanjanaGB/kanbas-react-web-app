@@ -8,8 +8,25 @@
     <link href="./courseNavigationSmall.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="row" style="height: 100%;">
-    <div class="col-sm-11  wd-course-navigation-column d-md-none">
+<div class="row flex-wrap" style="height: 100%;">
+    <div class="row d-md-none" style="background-color: black">
+        <div class="col-sm-1">
+            <a href="./kanbasNavigationSmall.html"> <i class="fas fa-bars" style="color: #d20f0f; padding-top: 20px;"></i> </a>
+        </div>
+        <div class="col-sm-10">
+            <nav style="--bs-breadcrumb-divider: '>'; padding-top: 20px;" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../courses/home/index.html">CS5610.FALL2023.SEC</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-sm-1 float-end" style="padding-top: 20px;">
+            <a href="../courses/home/index.html" style="text-align: right; background-color: black;"><i class="far fa-window-close" style="color: red;"></i></a>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col wd-course-navigation-column d-md-none">
         <div class="wd-course list-group">
             <a href="../courses/home/index.html" class="list-group-item active"><i class="fas fa-home" style="color: red;"></i> Home</a>
             <a href="#" class="list-group-item"><i class="fas fa-book-open" style="color: red;"></i> Modules</a>
@@ -31,8 +48,6 @@
             <a href="../courses/settings/courseDetails/index.html" class="list-group-item"><i class="fas fa-cog" style="color: red;"></i> Settings</a>
         </div>
     </div>
-    <div class="col-sm-1">
-        <a href="../courses/home/index.html"><i class="far fa-window-close" style="color: red;"></i></a>
     </div>
 </div>
 </body>
