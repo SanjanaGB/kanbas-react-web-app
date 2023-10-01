@@ -1,0 +1,46 @@
+.wd-course.list-group {
+    border-radius: 0%;
+    border-color: white;
+}
+.wd-course.list-group > .list-group-item {
+    background-color: white;
+    border-color: white;
+    text-align: center;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    width: 73px;
+}
+
+.wd-course.list-group > .list-group-item {
+    color: red;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.wd-course.list-group > .list-group-item.active {
+    background-color: white;
+    border-color: white;
+    color: red;
+}
+
+.wd-course.list-group > .list-group-item > i {
+    font-size: 2em;
+    color: red;
+}
+
+.wd-course-navigation-column {
+    min-width: 75px;
+    max-width: 85px;
+    vertical-align: middle;
+    horiz-align: center;
+    background-color: black;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+.wd-course-navigation-fix{
+    position: relative;
+}
