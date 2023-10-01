@@ -2,13 +2,14 @@
     border-radius: 0%;
     border-color: white;
 }
+
 .wd-course.list-group > .list-group-item {
     background-color: white;
     border-color: white;
-    text-align: center;
+    text-align: left;
     padding-right: 50px;
     padding-bottom: 10px;
-    width: 73px;
+    width: 100%;
 }
 
 .wd-course.list-group > .list-group-item {
@@ -29,11 +30,10 @@
 }
 
 .wd-course-navigation-column {
-    min-width: 75px;
-    max-width: 85px;
     vertical-align: middle;
     horiz-align: center;
     background-color: black;
+    width: 100%;
 }
 
 a {
