@@ -50,6 +50,9 @@ function Grades() {
                                 {assignments.map((assignment) => {
                                     const grade = db.grades.find(
                                         (grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
+                                    if(enrollment.user === "123" && assignment._id === "A103" || enrollment.user === "121" && assignment._id === "A101") {
+                                        return (<td style={{textAlign: "center"}}><input type="text" value={grade?.grade || ""} style={{textAlign: "center"}}/></td>);
+                                    }
                                     return (<td style={{textAlign: "center"}}>{grade?.grade || ""}</td>);})}
                             </tr>);
                     })}
