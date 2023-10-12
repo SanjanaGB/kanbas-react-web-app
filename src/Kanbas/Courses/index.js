@@ -12,7 +12,7 @@ function Courses() {
     const { courseId } = useParams();
     const course = db.courses.find((course) => course._id === courseId);
     return (
-        <div style={{paddingLeft: 110, width: 1450}}>
+        <div style={{paddingLeft: 110, width: 1430}}>
             <h1 style={{paddingLeft: 10}}>Course {course.name}</h1>
             <hr/>
             <div className="row">
