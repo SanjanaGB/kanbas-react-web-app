@@ -5,6 +5,7 @@ import { BsFillClipboardFill } from "react-icons/bs"
 import {AiFillCheckCircle, AiOutlinePlus} from "react-icons/ai"
 import { BsThreeDotsVertical } from "react-icons/bs"
 import { PiDotsSixVertical} from "react-icons/pi";
+import {RxDragHandleDots2} from "react-icons/rx";
 
 function Assignments() {
     const { courseId } = useParams();
@@ -21,11 +22,11 @@ function Assignments() {
                         </div>
                         <div className="float-end">
 
-                            <button type="button" className="btn btn-secondary"><AiOutlinePlus style={{color: "white"}}></AiOutlinePlus> Group</button>
+                            <button type="button" className="btn btn-secondary" style={{margin: 5}}><AiOutlinePlus style={{color: "white"}}></AiOutlinePlus> Group</button>
 
-                            <button type="button" className="btn btn-danger"><AiOutlinePlus style={{color: "white"}}></AiOutlinePlus> Assignment</button>
+                            <button type="button" className="btn btn-danger" style={{margin: 5}}><AiOutlinePlus style={{color: "white"}}></AiOutlinePlus> Assignment</button>
 
-                            <select className="btn btn-secondary" style={{width: 60}}>
+                            <select className="btn btn-secondary" style={{width: 60, margin: 5}}>
                                 <option selected>&#xf142;</option>
                                 <option value="editAssignmentDates">Edit Assignment Dates</option>
                                 <option value="assignmentsGroupWeight">Assignment Group Weight</option>
@@ -38,7 +39,7 @@ function Assignments() {
                 <hr/>
                 <br/>
                 <ul className="list-group">
-                    <li className="list-group-item list-group-item-action list-group-item-secondary"><PiDotsSixVertical></PiDotsSixVertical> Assignments
+                    <li className="list-group-item list-group-item-action list-group-item-secondary"><RxDragHandleDots2></RxDragHandleDots2> Assignments
                         <div className="float-end">
                             <div className="wd-rounded-corners-all-around wd-border-black wd-border-solid p-1" style={{float: "left"}}>40% of Total</div>
                             <div style={{float: "right"}} className="p-1">
@@ -56,7 +57,7 @@ function Assignments() {
                             </div>
                         </div></li>
                     {courseAssignments.map((assignment) => (
-                        <li className="list-group-item list-group-item-action"><PiDotsSixVertical></PiDotsSixVertical>
+                        <li className="list-group-item list-group-item-action"><RxDragHandleDots2></RxDragHandleDots2>
                             <Link
                                 key={assignment._id}
                                 to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}

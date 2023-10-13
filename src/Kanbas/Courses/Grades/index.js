@@ -11,13 +11,13 @@ function Grades() {
         <div>
             <div className="float-end">
 
-                <button type="button" className="btn btn-secondary" style={{height: 40}}><BiImport></BiImport> Import</button>
+                <button type="button" className="btn btn-secondary" style={{height: 40, margin: 5}}><BiImport></BiImport> Import</button>
 
-                <select className="btn btn-secondary" style={{height: 40}}>
+                <select className="btn btn-secondary" style={{height: 40, margin: 5}}>
                     <option value="export" selected>&#xf56e; Export</option>
                 </select>
 
-                <button type="button" className="btn btn-secondary" style={{height: 40}}><IoSettingsSharp></IoSettingsSharp></button>
+                <button type="button" className="btn btn-secondary" style={{height: 40, margin: 5}}><IoSettingsSharp></IoSettingsSharp></button>
             </div>
             <br/>
             <br/>

@@ -19,7 +19,7 @@ function AssignmentEditor() {
         <div className="col" style={{paddingRight: 50}}>
             <div className="float-end">
                 <AiFillCheckSquare style={{color: "green"}}></AiFillCheckSquare> <font color="green">Published</font>
-                <select className="btn btn-secondary">
+                <select className="btn btn-secondary" style={{margin: 5}}>
                     <option value="speedGrader" selected>&#xf142;</option>
                 </select>
             </div><br/><br/>
@@ -184,12 +184,12 @@ function AssignmentEditor() {
                     <input className="form-check-input" type="checkbox" value="peerReviews"
                            name="check-peer-review" id="chkbox-notify-users"/>
                     <label className="form-check-label" htmlFor="chkbox-notify-users">Notify users that content has changed</label>
-                    <div style={{textAlign: "right", padding: 5}}>
+                    <div style={{textAlign: "right", padding: 5, margin: 5}}>
                         <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
                               className="btn btn-danger">
                             Cancel
                         </Link>
-                        <button onClick={handleSave} className="btn btn-success me-2">
+                        <button onClick={handleSave} className="btn btn-success me-2" style={{margin: 5}}>
                             Save
                         </button>
                     </div>

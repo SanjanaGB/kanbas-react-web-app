@@ -16,10 +16,10 @@ function Courses() {
             <h1 style={{paddingLeft: 10}}>Course {course.name}</h1>
             <hr/>
             <div className="row">
-                <div className="col col-3">
+                <div className="col col-2">
                     <CourseNavigation />
                 </div>
-                <div className="col col-9" style={{alignItems: "center"}}>
+                <div className="col col-10" style={{alignItems: "center"}}>
                         <Routes>
                             <Route path="/" element={<Navigate to="Home" />} />
                             <Route path="Home" element={<Home/>} />

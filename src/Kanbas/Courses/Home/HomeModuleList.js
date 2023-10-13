@@ -6,7 +6,7 @@ import {BsFillClipboardFill} from "react-icons/bs";
 import {AiFillCheckCircle} from "react-icons/ai";
 
 
-function ModuleList() {
+function HomeModuleList() {
     const { courseId } = useParams();
     const modules = db.modules;
     return (
@@ -16,10 +16,10 @@ function ModuleList() {
                     .filter((module) => module.course === courseId)
                     .map((module, index) => (
                         <li key={index} className="list-group-item">
-                            <div className={"row"}>
-                            <div className={"col"} style={{textAlign: "left", paddingRight: 0, width: 50}}><RxDragHandleDots2/></div>
-                            <div className={"col col-10"} style={{paddingLeft: 0, width: 945}}><h5>{module.name}</h5></div>
-                            <div className={"col col-1"} style={{textAlign: "right", width: 90}}><AiFillCheckCircle className="wd-icon" style={{color: "green"}}/><RxDotsVertical/></div>
+                            <div className="row">
+                                <div className="col" style={{textAlign: "left", paddingRight: 0, width: 30}}><RxDragHandleDots2/></div>
+                                <div className="col col-10" style={{paddingLeft: 0}}><h5>{module.name}</h5></div>
+                                <div className="col col-1" style={{textAlign: "right", width: 90}}><AiFillCheckCircle className="wd-icon" style={{color: "green"}}/><RxDotsVertical/></div>
                             </div>
                             <p>{module.description}</p>
                         </li>
@@ -28,4 +28,4 @@ function ModuleList() {
         </ul>
     );
 }
-export default ModuleList;
+export default HomeModuleList;
