@@ -16,10 +16,10 @@ function ModuleList() {
                     .filter((module) => module.course === courseId)
                     .map((module, index) => (
                         <li key={index} className="list-group-item">
-                            <div className={"row"}>
-                            <div className={"col"} style={{textAlign: "left", paddingRight: 0, width: 50}}><RxDragHandleDots2/></div>
-                            <div className={"col col-10"} style={{paddingLeft: 0, width: 945}}><h5>{module.name}</h5></div>
-                            <div className={"col col-1"} style={{textAlign: "right", width: 90}}><AiFillCheckCircle className="wd-icon" style={{color: "green"}}/><RxDotsVertical/></div>
+                            <div>
+                            <div style={{float: "left", textAlign: "left", paddingRight: 0, width: 40}}><RxDragHandleDots2/></div>
+                            <div style={{paddingLeft: 0, width: "auto"}}><h5>{module.name}</h5></div>
+                            <div style={{float: "right", textAlign: "right", width: 60}}><AiFillCheckCircle className="wd-icon" style={{color: "green"}}/><RxDotsVertical/></div>
                             </div>
                             <p>{module.description}</p>
                         </li>
