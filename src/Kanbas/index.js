@@ -10,7 +10,7 @@ function Kanbas() {
             <div className="d-none d-md-block" style={{float: "left", width: 100}}>
             <KanbasNavigation />
             </div>
-            <div style={{alignItems: "center", width: "auto", overflow: "hidden"}}>
+            <div style={{alignItems: "center", width: "auto", overflow: "hidden",  paddingRight: 10}}>
                 <Routes>
                     <Route path="/" element={<Navigate to="Dashboard" />} />
                     <Route path="Account" element={<h1>Account</h1>} />
