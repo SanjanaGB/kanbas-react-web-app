@@ -2,7 +2,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import {RxDotsVertical, RxDragHandleDots2} from "react-icons/rx";
-import {BsFillClipboardFill} from "react-icons/bs";
 import {AiFillCheckCircle} from "react-icons/ai";
 
 
