@@ -4,7 +4,7 @@ import "./index.css";
 function Dashboard() {
     const courses = db.courses;
     return (
-        <div style={{paddingLeft: 110, width: 1350}}>
+        <div>
             <h1>Dashboard</h1>
             <hr style={{paddingLeft: 20}}/>
             <h3>Published Courses</h3>

@@ -15,7 +15,7 @@ import {BiTargetLock} from "react-icons/bi";
 function Home() {
     return (
         <div className="row">
-            <div className="col col-8">
+            <div className="col col-xl-8 col-lg-12 col-md-10">
                 <div className="float-end" style={{paddingTop: 10}}>
                     <button type="button" className="btn btn-secondary" style={{margin: 5}}>Collapse all</button>
                     <button type="button" className="btn btn-secondary">View Progress</button>
@@ -27,7 +27,7 @@ function Home() {
                 <hr/><br/>
                 <HomeModuleList />
             </div>
-            <div className="col col-4">
+            <div className="col col-xl-4 d-none d-xl-block">
                 <h2>Course Status</h2>
                 <button type="button" className="btn btn-secondary" style={{margin: 5}}><FaBan style={{color: "white"}}></FaBan> Unpublished</button>
                 <button type="button" className="btn btn-success" style={{margin: 5}}><AiOutlineCheckCircle style={{color: "white"}}></AiOutlineCheckCircle> Published</button><br/><br/>

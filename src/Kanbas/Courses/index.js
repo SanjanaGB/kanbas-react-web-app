@@ -12,14 +12,13 @@ function Courses() {
     const { courseId } = useParams();
     const course = db.courses.find((course) => course._id === courseId);
     return (
-        <div style={{paddingLeft: 110, width: 1430}}>
+        <div>
             <h1 style={{paddingLeft: 10}}>Course {course.name}</h1>
             <hr/>
-            <div className="row">
-                <div className="col col-2">
+                <div className="d-none d-md-block" style={{float: "left", width: 180}}>
                     <CourseNavigation />
                 </div>
-                <div className="col col-10" style={{alignItems: "center"}}>
+                <div style={{alignItems: "center", width: "auto", overflow: "hidden"}}>
                         <Routes>
                             <Route path="/" element={<Navigate to="Home" />} />
                             <Route path="Home" element={<Home/>} />
@@ -28,8 +27,7 @@ function Courses() {
                             <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>}/>
                             <Route path="Grades" element={<Grades />} />
                         </Routes>
-                    </div>
-            </div>
+                </div>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import React from "react";
 import {AiOutlinePlus} from "react-icons/ai";
 function Modules() {
     return (
-        <div className="col">
+        <div className="col col-xl-8 col-lg-12 col-md-10">
             <div className="float-end" style={{paddingTop: 10}}>
                 <button type="button" className="btn btn-secondary" style={{margin: 5}}>Collapse all</button>
                 <button type="button" className="btn btn-secondary">View Progress</button>
