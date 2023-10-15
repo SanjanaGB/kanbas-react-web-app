@@ -4,8 +4,8 @@ import db from "../../Database";
 import { BsFillClipboardFill } from "react-icons/bs"
 import {AiFillCheckCircle, AiOutlinePlus} from "react-icons/ai"
 import { BsThreeDotsVertical } from "react-icons/bs"
-import { PiDotsSixVertical} from "react-icons/pi";
 import {RxDragHandleDots2} from "react-icons/rx";
+import "./index.css";
 
 function Assignments() {
     const { courseId } = useParams();
