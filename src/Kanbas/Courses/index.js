@@ -7,7 +7,7 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import {FaBars} from "react-icons/fa";
-import {BiSolidDownArrow} from "react-icons/bi";
+import {BiGlasses, BiSolidDownArrow} from "react-icons/bi";
 
 function ifNotActiveCreateLink (index, path) {
 
@@ -36,28 +36,45 @@ function Courses() {
         }
     };
 
+    const isHomeOrModulPage = () => {
+        if(path[0] === "Home" || path[0] === "Modules") {
+            return(
+                <button type="button" className="btn btn-secondary float-end"><BiGlasses style={{color: "white"}}/> Student View</button>
+            );
+        }
+    };
+
+
+
     return (
         <div>
             <div className="d-none d-md-block">
-                <nav aria-label="breadcrumb">
-                    <ol className="breadcrumb m-0">
-                        <li className="breadcrumb-item text-danger">
-                            <FaBars className="me-2" style={{ fontSize: "1.5em" }} />
-                            <Link
-                                to={`/Kanbas/Courses/${courseId}`}
-                                className="wd-link fw-semibold text-danger" style={{textDecoration: "none"}}>
-                            <span className="fw-semibold">{course.name}.{course.number} </span>
-                        </Link>
-                    </li>
-                    {path.map((path, index) => (
-                        <li className={"breadcrumb-item" + getActiveClass(index)}
-                            aria-current="page" >
-                            <font style={{color: "red"}}> > </font>
-                            {ifNotActiveCreateLink(index, path)}
+                <div className="row">
+                    <div className="col col-8">
+                    <nav aria-label="breadcrumb">
+                        <ol className="breadcrumb m-0">
+                            <li className="breadcrumb-item text-danger">
+                                <FaBars className="me-2" style={{ fontSize: "1.5em" }} />
+                                <Link
+                                    to={`/Kanbas/Courses/${courseId}`}
+                                    className="wd-link fw-semibold text-danger" style={{textDecoration: "none"}}>
+                                <span className="fw-semibold">{course.name}.{course.number} </span>
+                            </Link>
                         </li>
-                        ))}
-                </ol>
-                </nav>
+                        {path.map((path, index) => (
+                            <li className={"breadcrumb-item" + getActiveClass(index)}
+                                aria-current="page" >
+                                <font style={{color: "red"}}> > </font>
+                                {ifNotActiveCreateLink(index, path)}
+                            </li>
+                            ))}
+                    </ol>
+                    </nav>
+                    </div>
+                    <div className="col col-4" style={{paddingTop: 10}}>
+                    {isHomeOrModulPage()}
+                    </div>
+                </div>
                 <hr/>
         </div>
             <div className="d-none d-md-block" style={{float: "left", width: 180}}>
