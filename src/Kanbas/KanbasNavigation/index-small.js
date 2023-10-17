@@ -9,9 +9,12 @@ import {
     BsFillInboxFill
 } from "react-icons/bs";
 import {LiaFileExportSolid} from "react-icons/lia";
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useParams} from "react-router-dom";
+import {AiFillCloseSquare} from "react-icons/ai";
 function KanbasNavigationSmall() {
     const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help"];
+
+    const { courseId } = useParams();
 
     const linkToIconMap = {
         Account: <BiUserCircle className="wd-icon" style={{color: "red"}}/>,
@@ -27,6 +30,16 @@ function KanbasNavigationSmall() {
 
     const { pathname } = useLocation();
     return(
+        <div>
+        <div className="row">
+            <div className="col" style={{paddingTop: 20}}>
+                <Link to={`/Kanbas/Courses/${courseId}/Home`}
+                      className="wd-link fw-semibold text-danger float-end"
+                      style={{textDecoration: "none"}}>
+                    <span className="fw-semibold"> <AiFillCloseSquare className="wd-icon" style={{color: "red", height: 30}}/></span>
+                </Link>
+            </div>
+        </div>
         <div className="row">
             <div className="col wd-kanbas-navigation-column d-md-none" style={{backgroundColor: "white" }}>
                 <div className="wd-kanbas list-group wd-kanbas-navigation-fix" style={{backgroundColor: "white", borderColor: "white"}}>
@@ -43,6 +56,7 @@ function KanbasNavigationSmall() {
                     ))}
                 </div>
             </div>
+        </div>
         </div>
     )
 }

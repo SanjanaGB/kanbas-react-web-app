@@ -63,8 +63,15 @@ function Courses() {
             <div className="d-none d-md-block" style={{float: "left", width: 180}}>
                     <CourseNavigation />
             </div>
-            <div className="row d-md-none" style={{backgroundColor: "black", height: 30}}>
-                <div className="col-sm-11" style={{paddingLeft: 200}}>
+            <div className="row d-md-none" style={{backgroundColor: "black", height: 80}}>
+                    <div className="col-sm-1">
+                        <Link to={`/Kanbas/KanbasNavigationSmall/${courseId}`}
+                              className="wd-link fw-semibold text-danger"
+                              style={{textDecoration: "none"}}>
+                            <span className="fw-semibold"> <FaBars className="wd-icon" style={{color: "red", height: 30}}/></span>
+                        </Link>
+                    </div>
+                <div className="col-sm-10" style={{paddingLeft: 100}}>
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb m-0">
                                 <li className="breadcrumb-item text-danger">

@@ -2,7 +2,7 @@ import {Link, useLocation, useParams} from "react-router-dom";
 import "./index-small.css"
 import {BiHelpCircle, BiSolidUser, BiUserCircle} from "react-icons/bi";
 import {RiDashboard3Fill} from "react-icons/ri";
-import {FaBook, FaPlane, FaUsers} from "react-icons/fa";
+import {FaBars, FaBook, FaPlane, FaUsers} from "react-icons/fa";
 import {
     BsCameraVideoFill, BsCircle, BsClipboardCheck,
     BsClockHistory, BsFillBookFill,
@@ -10,7 +10,7 @@ import {
     BsFillInboxFill, BsPlugFill, BsTable
 } from "react-icons/bs";
 import {LiaFileExportSolid} from "react-icons/lia";
-import {AiFillHome, AiOutlineFile} from "react-icons/ai";
+import {AiFillCloseSquare, AiFillHome, AiOutlineFile} from "react-icons/ai";
 import {TfiAnnouncement} from "react-icons/tfi";
 
 function CourseNavigationSmall() {
@@ -41,6 +41,16 @@ function CourseNavigationSmall() {
     };
 
     return(
+        <div>
+        <div className="row">
+            <div className="col" style={{paddingTop: 20}}>
+                <Link to={`/Kanbas/Courses/${courseId}/Home`}
+                      className="wd-link fw-semibold text-danger float-end"
+                      style={{textDecoration: "none"}}>
+                    <span className="fw-semibold"> <AiFillCloseSquare className="wd-icon" style={{color: "red", height: 30}}/></span>
+                </Link>
+               </div>
+        </div>
         <div className="row">
             <div className="col wd-course-navigation-column d-md-none">
                 <div className="wd-course list-group">
@@ -57,6 +67,7 @@ function CourseNavigationSmall() {
                         </div>
                     </div>
             </div>
+        </div>
         </div>
     );
 }
