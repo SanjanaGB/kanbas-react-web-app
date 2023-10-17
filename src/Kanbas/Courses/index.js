@@ -37,27 +37,29 @@ function Courses() {
 
     return (
         <div>
-
-            <nav aria-label="breadcrumb">
-                <ol className="breadcrumb m-0">
-                    <li className="breadcrumb-item text-danger">
-                        <FaBars className="me-2" style={{ fontSize: "1.5em" }} />
-                        <Link
-                            to={`/Kanbas/Courses/${courseId}`}
-                            className="wd-link fw-semibold text-danger" style={{textDecoration: "none"}}>
-                        <span className="fw-semibold">{course.name}.{course.number} </span>
-                    </Link>
-                </li>
-                {path.map((path, index) => (
-                    <li className={"breadcrumb-item" + getActiveClass(index)}
-                        aria-current="page" >
-                        <font style={{color: "red"}}> > </font>
-                        {ifNotActiveCreateLink(index, path)}
+            <div className="d-none d-md-block">
+                <nav aria-label="breadcrumb">
+                    <ol className="breadcrumb m-0">
+                        <li className="breadcrumb-item text-danger">
+                            <FaBars className="me-2" style={{ fontSize: "1.5em" }} />
+                            <Link
+                                to={`/Kanbas/Courses/${courseId}`}
+                                className="wd-link fw-semibold text-danger" style={{textDecoration: "none"}}>
+                            <span className="fw-semibold">{course.name}.{course.number} </span>
+                        </Link>
                     </li>
-                    ))}
-            </ol>
-            </nav>
-            <hr/>
+                    {path.map((path, index) => (
+                        <li className={"breadcrumb-item" + getActiveClass(index)}
+                            aria-current="page" >
+                            <font style={{color: "red"}}> > </font>
+                            {ifNotActiveCreateLink(index, path)}
+                        </li>
+                        ))}
+                </ol>
+                </nav>
+                <hr/>
+        </div>
+
                 <div className="d-none d-md-block" style={{float: "left", width: 180}}>
                     <CourseNavigation />
                 </div>
