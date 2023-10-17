@@ -7,7 +7,6 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import {FaBars} from "react-icons/fa";
-import "./index.css";
 
 function ifNotActiveCreateLink (index, path) {
 
