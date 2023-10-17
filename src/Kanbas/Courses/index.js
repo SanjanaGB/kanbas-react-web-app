@@ -7,6 +7,7 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import {FaBars} from "react-icons/fa";
+import {BiSolidDownArrow} from "react-icons/bi";
 
 function ifNotActiveCreateLink (index, path) {
 
@@ -31,7 +32,7 @@ function Courses() {
                 <span className="fw-semibold">{path} </span>
             </Link>);
         } else {
-            return (<span className="fw-semibold">{path} </span>);
+            return (<span className="fw-semibold" style={{color: "gray"}}>{path} </span>);
         }
     };
 
@@ -59,10 +60,38 @@ function Courses() {
                 </nav>
                 <hr/>
         </div>
-
-                <div className="d-none d-md-block" style={{float: "left", width: 180}}>
+            <div className="d-none d-md-block" style={{float: "left", width: 180}}>
                     <CourseNavigation />
+            </div>
+            <div className="row d-md-none" style={{backgroundColor: "black", height: 30}}>
+                <div className="col-sm-11" style={{paddingLeft: 200}}>
+                        <nav aria-label="breadcrumb">
+                            <ol className="breadcrumb m-0">
+                                <li className="breadcrumb-item text-danger">
+                                    <Link
+                                        to={`/Kanbas/Courses/${courseId}`}
+                                        className="wd-link fw-semibold text-danger" style={{textDecoration: "none"}}>
+                                        <span className="fw-semibold">{course.name}.{course.number} </span>
+                                    </Link>
+                                </li>
+                                {path.map((path, index) => (
+                                    <li className={"breadcrumb-item" + getActiveClass(index)}
+                                        aria-current="page" >
+                                        <font style={{color: "red"}}> > </font>
+                                        {ifNotActiveCreateLink(index, path)}
+                                    </li>
+                                ))}
+                            </ol>
+                        </nav>
                 </div>
+                <div className="col-sm-1">
+                    <Link to={`/Kanbas/CourseNavigationSmall/${courseId}`}
+                          className="wd-link fw-semibold text-danger"
+                          style={{textDecoration: "none"}}>
+                        <span className="fw-semibold"> <BiSolidDownArrow className="wd-icon" style={{color: "red", height: 30}}/></span>
+                    </Link>
+                </div>
+            </div>
                 <div style={{alignItems: "center", width: "auto", overflow: "hidden"}}>
                         <Routes>
                             <Route path="/" element={<Navigate to="Home" />} />

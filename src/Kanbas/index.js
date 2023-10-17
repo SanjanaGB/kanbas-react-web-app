@@ -4,6 +4,8 @@ import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import KanbasNavigationSmall from "./KanbasNavigation/index-small";
 import {FaBars} from "react-icons/fa";
+import CourseNavigationSmall from "./Courses/CourseNavigation/index-small";
+import {BiSolidDownArrow} from "react-icons/bi";
 
 
 function Kanbas() {
@@ -29,6 +31,7 @@ function Kanbas() {
                     <Route path="Courses/:courseId/*" element={<Courses />} />
                     <Route path="Courses/" element={<Dashboard />} />
                     <Route path="KanbasNavigationSmall" element={<KanbasNavigationSmall />}/>
+                    <Route path="CourseNavigationSmall/:courseId/*" element={<CourseNavigationSmall />}/>
                 </Routes>
             </div>
         </div>
