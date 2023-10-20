@@ -3,9 +3,7 @@ import {Routes, Route, Navigate, Link, useLocation} from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import KanbasNavigationSmall from "./KanbasNavigation/index-small";
-import {FaBars} from "react-icons/fa";
 import CourseNavigationSmall from "./Courses/CourseNavigation/index-small";
-import {BiSolidDownArrow} from "react-icons/bi";
 
 
 function Kanbas() {
