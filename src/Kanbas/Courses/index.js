@@ -9,15 +9,13 @@ import Grades from "./Grades";
 import {FaBars} from "react-icons/fa";
 import {BiGlasses, BiSolidDownArrow} from "react-icons/bi";
 
-function ifNotActiveCreateLink (index, path) {
 
-}
-function Courses() {
+function Courses({ courses }) {
     const { courseId } = useParams();
     const {pathname} = useLocation();
     let path = pathname.split("/");
     path = path.slice(4);
-    const course = db.courses.find((course) => course._id === courseId);
+    const course = courses.find((course) => course._id === courseId);
     const getActiveClass = (index) => {
         return index === path.length - 1
                ? "active"

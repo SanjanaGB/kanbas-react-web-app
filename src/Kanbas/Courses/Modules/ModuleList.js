@@ -1,26 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
-import {RxDotsVertical, RxDragHandleDots2} from "react-icons/rx";
-import {AiFillCheckCircle} from "react-icons/ai";
-
+import "./index.css"
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+} from "./modulesReducer";
 
 function ModuleList() {
     const { courseId } = useParams();
-    const modules = db.modules;
+    const modules = useSelector((state) => state.modulesReducer.modules);
+    const module = useSelector((state) => state.modulesReducer.module);
+    const dispatch = useDispatch();
+
     return (
         <ul className="list-group">
+            <li className="list-group-item">
+                <div>
+                        <div style={{float: "left"}}>
+                            <input className="form-control"  style={{margin: 5}} value={module.name}
+                                   onChange={(e) =>
+                                       dispatch(setModule({ ...module, name: e.target.value }))
+                                   }
+                            />
+                            <textarea className="form-control"  style={{margin: 5}} value={module.description}
+                                      onChange={(e) =>
+                                          dispatch(setModule({ ...module, description: e.target.value }))
+                                      }
+                            />
+                        </div>
+
+                    <div style={{float: "right"}}>
+                    <button style={{margin: 5}} className="btn btn-primary" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
+                    <button style={{margin: 5}} className="btn btn-danger" onClick={() => dispatch(updateModule(module))}>Update</button>
+                    </div>
+                </div>
+                    <br/><br/>
+            </li>
             {
                 modules
                     .filter((module) => module.course === courseId)
                     .map((module, index) => (
                         <li key={index} className="list-group-item">
                             <div>
-                            <div style={{float: "left", textAlign: "left", paddingRight: 0, width: 40}}><RxDragHandleDots2/></div>
-                            <div style={{paddingLeft: 0, width: "auto"}}><h5>{module.name}</h5></div>
-                            <div style={{float: "right", textAlign: "right", width: 60}}><AiFillCheckCircle className="wd-icon" style={{color: "green"}}/><RxDotsVertical/></div>
+                            <div style={{float: "left", paddingLeft: 0, width: "auto"}}>
+                                <h5>{module.name}</h5>
+                                <p>{module.description}</p>
                             </div>
-                            <p>{module.description}</p>
+                            <div style={{float: "right", textAlign: "right"}}>
+                                <button
+                                    className="btn btn-warning"
+                                    style={{margin: 5}}
+                                    onClick={() => dispatch(setModule(module))}>
+                                    Edit
+                                </button>
+                                <button
+                                    className="btn btn-danger"
+                                    style={{margin: 5}}
+                                    onClick={() => dispatch(deleteModule(module._id))}>
+                                    Delete
+                                </button>
+                            </div>
+                            </div>
                         </li>
                     ))
             }
