@@ -54,7 +54,10 @@ function AssignmentEditor() {
                                 <input className="form-control" type="number"
                                        id="text-field-point"
                                        placeholder="100"
-                                       value={assignment.maxScore}/><br/><br/>
+                                       value={assignment.maxScore}
+                                       onChange={(e) =>
+                                           dispatch(setAssignment({ ...assignment, maxScore: e.target.value }))
+                                       }/><br/><br/>
                             </div>
                         </div>
                         <div className="row">
