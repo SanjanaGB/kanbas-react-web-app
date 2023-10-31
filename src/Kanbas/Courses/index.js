@@ -15,7 +15,9 @@ function Courses({ courses }) {
     const {pathname} = useLocation();
     let path = pathname.split("/");
     path = path.slice(4);
+    console.log(courses);
     const course = courses.find((course) => course._id === courseId);
+    console.log(course);
     const getActiveClass = (index) => {
         return index === path.length - 1
                ? "active"
