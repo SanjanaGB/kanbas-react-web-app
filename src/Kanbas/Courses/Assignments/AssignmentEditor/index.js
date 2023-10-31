@@ -2,19 +2,22 @@ import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import {AiFillCheckSquare, AiOutlinePlus} from "react-icons/ai";
+import {useDispatch, useSelector} from "react-redux";
+import {setModule, updateModule} from "../../Modules/modulesReducer";
+import {saveAssignment, setAssignment, updateAssignment} from "../assignmentsReducer";
 
 function AssignmentEditor() {
     const { assignmentId } = useParams();
-    const assignment = db.assignments.find(
-        (assignment) => assignment._id === assignmentId);
-
-
+    const assignment = useSelector((state) => state.assignmentsReducer.defaultAssignment);
+    const dispatch = useDispatch();
     const { courseId } = useParams();
     const navigate = useNavigate();
     const handleSave = () => {
-        console.log("Actually saving assignment TBD in later assignments");
+        dispatch(setAssignment({ ...assignment, course:  courseId}));
+        dispatch(saveAssignment(assignment));
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
+
     return (
         <div className="col" style={{paddingRight: 50}}>
             <div className="float-end">
@@ -27,11 +30,18 @@ function AssignmentEditor() {
             <hr/>
 
                 <h4>Assignment Name</h4>
-                <input value={assignment.title} id="text-fields-assignmentName" className="form-control mb-2" /><br/><br/>
+                <input value={assignment.title} id="text-fields-assignmentName" className="form-control mb-2"
+                       onChange={(e) =>
+                           dispatch(setAssignment({ ...assignment, title: e.target.value }))
+                       }
+                /><br/><br/>
 
                 <textarea className="form-control" cols="20"
                           rows="2"
-                          title="tooltip">This is the assignment description
+                          title="tooltip"
+                          onChange={(e) =>
+                              dispatch(setAssignment({ ...assignment, description: e.target.value }))
+                          }>{assignment.title}
                         </textarea>
 
                 <div className="p-lg-5">
@@ -44,7 +54,7 @@ function AssignmentEditor() {
                                 <input className="form-control" type="number"
                                        id="text-field-point"
                                        placeholder="100"
-                                       value="100"/><br/><br/>
+                                       value={assignment.maxScore}/><br/><br/>
                             </div>
                         </div>
                         <div className="row">
@@ -155,7 +165,11 @@ function AssignmentEditor() {
                                 </label><br/>
                                 <input className="form-control" type="date"
                                        id="text-fields-due"
-                                       value="2000-01-21"/><br/>
+                                       value={assignment.dueDate}
+                                       onChange={(e) =>
+                                           dispatch(setAssignment({ ...assignment, dueDate: e.target.value }))
+                                       }
+                                /><br/>
                                 <div className="row">
                                     <div className="col">
                                         <label htmlFor="text-fields-from">
@@ -163,7 +177,11 @@ function AssignmentEditor() {
                                         </label><br/>
                                         <input className="form-control" type="date"
                                                id="text-fields-from"
-                                               value="2000-01-21"/><br/>
+                                               value={assignment.availableFrom}
+                                               onChange={(e) =>
+                                                   dispatch(setAssignment({ ...assignment, availableFrom: e.target.value }))
+                                               }
+                                        /><br/>
                                     </div>
                                     <div className="col">
                                         <label htmlFor="text-fields-to">
@@ -171,7 +189,11 @@ function AssignmentEditor() {
                                         </label><br/>
                                         <input className="form-control" type="date"
                                                id="text-fields-to"
-                                               value="2000-01-21"/>
+                                               value={assignment.availableUntil}
+                                               onChange={(e) =>
+                                                   dispatch(setAssignment({ ...assignment, availableUntil: e.target.value }))
+                                               }
+                                        />
                                     </div>
                                 </div>
                                 <button type="button" className="btn btn-secondary" style={{width: 100}}><AiOutlinePlus style={{color: "white"}}></AiOutlinePlus> Add</button>
