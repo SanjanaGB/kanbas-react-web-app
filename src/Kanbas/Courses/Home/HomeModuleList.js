@@ -1,14 +1,26 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import {RxDotsVertical, RxDragHandleDots2} from "react-icons/rx";
 import {BsFillClipboardFill} from "react-icons/bs";
 import {AiFillCheckCircle} from "react-icons/ai";
+import {findModulesForCourse} from "../Modules/client";
+import {setModules} from "../Modules/modulesReducer";
+import {useDispatch, useSelector} from "react-redux";
 
 
 function HomeModuleList() {
     const { courseId } = useParams();
-    const modules = db.modules;
+    useEffect(() => {
+        findModulesForCourse(courseId)
+            .then((modules) =>
+                dispatch(setModules(modules))
+            );
+    }, [courseId]);
+    const modules = useSelector((state) => state.modulesReducer.modules);
+    const module = useSelector((state) => state.modulesReducer.module);
+    const dispatch = useDispatch();
+
     return (
         <ul className="list-group">
             {

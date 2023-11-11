@@ -1,4 +1,3 @@
-import db from "../../Kanbas/Database";
 import {Link, Navigate, Route, Routes, useLocation, useParams} from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
@@ -8,16 +7,28 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import {FaBars} from "react-icons/fa";
 import {BiGlasses, BiSolidDownArrow} from "react-icons/bi";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
-function Courses({ courses }) {
+function Courses() {
     const { courseId } = useParams();
+    const [course, setCourse] = useState({});
+    const URL = "http://localhost:4000/api/courses";
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+
     const {pathname} = useLocation();
     let path = pathname.split("/");
     path = path.slice(4);
-    console.log(courses);
-    const course = courses.find((course) => course._id === courseId);
-    console.log(course);
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
     const getActiveClass = (index) => {
         return index === path.length - 1
                ? "active"
