@@ -1,21 +1,39 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link, useParams } from "react-router-dom";
 import {BsFillClipboardFill, BsPlusLg} from "react-icons/bs"
 import {AiOutlinePlus} from "react-icons/ai"
 import {RxDragHandleDots2} from "react-icons/rx";
 import "./index.css";
 import {useDispatch, useSelector} from "react-redux";
-import {deleteAssignment, setAssignment} from "./assignmentsReducer";
+import {deleteAssignment, setAssignment, setAssignments} from "./assignmentsReducer";
+import {fetchSingleAssignment, findAssignmentsForCourse, removeAssignment} from "./client";
 
 function Assignments() {
     const { courseId } = useParams();
+    useEffect(() => {
+        findAssignmentsForCourse(courseId)
+            .then((assignments) =>
+                dispatch(setAssignments(assignments))
+            );
+    }, [courseId]);
+    const handleDeleteAssignment = (assignmentId) => {
+        removeAssignment(assignmentId).then((status) => {
+            dispatch(deleteAssignment(assignmentId));
+        });
+    };
+
+    const handleEditAssignment = (assignmentId) => {
+        fetchSingleAssignment(assignmentId).then((assignment) => {
+            dispatch(setAssignment(assignment));
+        });
+    }
+
     const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+    const assignment = useSelector((state) => state.assignmentsReducer.assignment);
     const dispatch = useDispatch();
-    const courseAssignments = assignments.filter(
-        (assignment) => assignment.course === courseId);
-    const newAssignment= { _id: "id", course: "course", title: "New Assignment", maxScore: "100", dueDate: "2023-03-15", availableFrom: "2023-01-10", availableUntil: "2023-05-15" };
+
     const getAssignmentId = (courseId) => {
-        return "A" + courseId.toString() + (courseAssignments.length+1).toString()
+        return "A" + courseId.toString() + (assignments.length+1).toString()
     }
 
     return (
@@ -32,7 +50,7 @@ function Assignments() {
 
                             <Link
                                 to={`/Kanbas/Courses/${courseId}/Assignments/${getAssignmentId(courseId)}`}
-                                onClick={() => dispatch(setAssignment(newAssignment))}
+                                onClick={() => dispatch(setAssignment({...assignment, _id: getAssignmentId(courseId)}))}
                                 style={{color:"black", textDecoration: "none"}} className="text-underline-hover">
                                 <button type="button" className="btn btn-danger" style={{margin: 5}}><AiOutlinePlus style={{color: "white"}}></AiOutlinePlus> Assignment</button>
                             </Link>
@@ -69,14 +87,14 @@ function Assignments() {
                                 </select>
                             </div>
                         </div></li>
-                    {courseAssignments.map((assignment) => (
+                    {assignments.map((assignment) => (
                         <li className="list-group-item list-group-item-action">
                             <div>
                             <div style={{float: "left"}}>
                             <Link
                                 key={assignment._id}
                                 to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-                                onClick={() => dispatch(setAssignment(assignment))}
+                                onClick={() => handleEditAssignment(assignment._id)}
                                  style={{color:"black", textDecoration: "none"}} className="text-underline-hover">
                                 <RxDragHandleDots2></RxDragHandleDots2><BsFillClipboardFill className="wd-icon" style={{color: "green"}}></BsFillClipboardFill>{assignment.title}
                             </Link>
@@ -86,7 +104,7 @@ function Assignments() {
                         <button
                             className="btn btn-danger"
                             style={{margin: 5}}
-                            onClick={() => dispatch(deleteAssignment(assignment._id))}>
+                            onClick={() => handleDeleteAssignment(assignment._id)}>
                             Delete
                         </button>
                     </div>

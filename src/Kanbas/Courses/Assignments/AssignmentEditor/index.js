@@ -3,18 +3,22 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import {AiFillCheckSquare, AiOutlinePlus} from "react-icons/ai";
 import {useDispatch, useSelector} from "react-redux";
-import {setModule, updateModule} from "../../Modules/modulesReducer";
+import {addModule, setModule, updateModule} from "../../Modules/modulesReducer";
 import {saveAssignment, setAssignment, updateAssignment} from "../assignmentsReducer";
+import {createModule} from "../../Modules/client";
+import {createAssignment, updateOrCreateAssignment} from "../client";
 
 function AssignmentEditor() {
     const { assignmentId } = useParams();
-    const assignment = useSelector((state) => state.assignmentsReducer.defaultAssignment);
+    const assignment = useSelector((state) => state.assignmentsReducer.assignment);
     const dispatch = useDispatch();
     const { courseId } = useParams();
     const navigate = useNavigate();
     const handleSave = () => {
-        dispatch(setAssignment({ ...assignment, course:  courseId}));
-        dispatch(saveAssignment(assignment));
+        console.log(assignment);
+        updateOrCreateAssignment(courseId, assignment).then((assignment) => {
+            dispatch(saveAssignment(assignment));
+        });
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
 
