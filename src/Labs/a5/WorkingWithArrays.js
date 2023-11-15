@@ -5,7 +5,7 @@ function WorkingWithArrays() {
     const [title, setTitle] = useState("Go to work");
     const [todos, setTodos] = useState([]);
     const [todo, setTodo] = useState({
-                                         id: 2,
+                                         id: 1,
                                          title: "NodeJS Assignment",
                                          description: "Create a NodeJS server with ExpressJS",
                                          due: "2021-09-09",
@@ -221,7 +221,7 @@ function WorkingWithArrays() {
                 Get Todo by ID
             </a>
             <h3>Filtering Array Items</h3>
-            <a href={`${API}/${todo.id}?completed=true`}
+            <a href={`${API}?completed=true`}
                className="btn btn-primary me-2" >
                 Get Completed Todos
             </a>
