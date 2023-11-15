@@ -186,19 +186,19 @@ function WorkingWithArrays() {
             <a
                 href={`${API}/${todo.id}/title/${todo.title}`}
                 className="btn btn-primary me-2" >
-                Update Title to {todo.title}
+                Update Title to {todo.title} of todo with ID = {todo.id}
             </a>
             <h3>Updating Description of an Item in an Array</h3>
             <a
                 href={`${API}/${todo.id}/description/${todo.description}`}
                 className="btn btn-primary me-2" >
-                Update Description to {todo.description}
+                Update Description to {todo.description} of todo with ID = {todo.id}
             </a>
             <h3>Updating Status of an Item in an Array</h3>
             <a
                 href={`${API}/${todo.id}/completed/${todo.completed}`}
                 className="btn btn-primary me-2" >
-                Update Status to {todo.completed.toString()}
+                Update Status to {todo.completed.toString()} of todo with ID = {todo.id}
             </a>
 
             <h3>Deleting from an Array</h3>
@@ -211,13 +211,9 @@ function WorkingWithArrays() {
                 Get Todos
             </a>
             <h4>Retrieving an Item from an Array by ID</h4>
-            <input
-                className="form-control"
-                onChange={(e) => setTodo({ ...todo,
-                                             id: e.target.value })}/>
             <a href={`${API}/${todo.id}`}
                className="btn btn-primary me-2" style={{margin: 5}}>
-                Get Todo by ID
+                Get Todo by ID = {todo.id}
             </a>
             <h3>Filtering Array Items</h3>
             <a href={`${API}?completed=true`}
