@@ -61,7 +61,7 @@ function WorkingWithArrays() {
                 `${API}/${todo.id}`, todo);
             setTodos(todos.map((t) => (
                 t.id === todo.id ? todo : t)));
-            setTodo({});
+            setTodo(todo);
         } catch (error) {
             console.log(error);
             setErrorMessage(error.response.data.message);
