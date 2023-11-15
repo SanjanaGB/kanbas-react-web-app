@@ -213,7 +213,6 @@ function WorkingWithArrays() {
             <h4>Retrieving an Item from an Array by ID</h4>
             <input
                 className="form-control"
-                value={id}
                 onChange={(e) => setTodo({ ...todo,
                                              id: e.target.value })}/>
             <a href={`${API}/${todo.id}`}
