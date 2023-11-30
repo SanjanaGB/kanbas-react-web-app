@@ -12,6 +12,8 @@ function Nav() {
                 A5</Link>
             <Link className="nav-link" to="/hello">
                 Hello</Link>
+            <Link className="nav-link" to="/Project">
+                Project</Link>
             <Link className="nav-link" to="/Kanbas">
                 Kanbas</Link>
         </nav>

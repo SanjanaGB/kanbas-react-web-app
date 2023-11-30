@@ -5,7 +5,6 @@ import Courses from "./Courses";
 import KanbasNavigationSmall from "./KanbasNavigation/index-small";
 import CourseNavigationSmall from "./Courses/CourseNavigation/index-small";
 import {useEffect, useState} from "react";
-import db from "./Database";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
