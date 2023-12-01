@@ -4,6 +4,7 @@ import {BsFillCheckCircleFill, BsPencil, BsPlusCircleFill, BsTrash3Fill}
     from "react-icons/bs";
 import * as client from "../Users/client";
 import {Link} from "react-router-dom";
+import {CiCircleCheck, CiCirclePlus} from "react-icons/ci";
 function UserTable() {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState({ username: "", password: "", role: "USER" });
@@ -69,17 +70,17 @@ function UserTable() {
                 </tr>
                 <tr>
                     <td>
-                        <input value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })}/>
-                        <input value={user.username} onChange={(e) => setUser({ ...user, username: e.target.value })}/>
+                        <input style={{margin: 5}}  className="form-control" value={user.password} placeholder="Password" onChange={(e) => setUser({ ...user, password: e.target.value })}/>
+                        <input style={{margin: 5}}  className="form-control" value={user.username} placeholder="Username" onChange={(e) => setUser({ ...user, username: e.target.value })}/>
                     </td>
                     <td>
-                        <input value={user.firstName} onChange={(e) => setUser({ ...user, firstName: e.target.value })}/>
+                        <input style={{margin: 5}}  className="form-control" value={user.firstName} onChange={(e) => setUser({ ...user, firstName: e.target.value })}/>
                     </td>
                     <td>
-                        <input value={user.lastName} onChange={(e) => setUser({ ...user, lastName: e.target.value })}/>
+                        <input style={{margin: 5}}  className="form-control" value={user.lastName} onChange={(e) => setUser({ ...user, lastName: e.target.value })}/>
                     </td>
                     <td>
-                        <select value={user.role} onChange={(e) => setUser({ ...user, role: e.target.value })}>
+                        <select style={{margin: 5}} className="form-select" value={user.role} onChange={(e) => setUser({ ...user, role: e.target.value })}>
                             <option value="USER">User</option>
                             <option value="ADMIN">Admin</option>
                             <option value="FACULTY">Faculty</option>
@@ -87,9 +88,11 @@ function UserTable() {
                         </select>
                     </td>
                     <td>
-                        <BsFillCheckCircleFill onClick={updateOtherUser}
+                        <CiCircleCheck onClick={updateOtherUser}
                                                className="me-2 text-success fs-1 text" />
-                        <BsPlusCircleFill onClick={createUser}/>
+                    </td>
+                    <td>
+                        <CiCirclePlus onClick={createUser} className="me-2 text-success fs-1 text"/>
                     </td>
                 </tr>
                 </thead>

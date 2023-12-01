@@ -41,32 +41,32 @@ function OtherAccountData() {
             </div>
             {account && (
                 <div>
-                    <input value={account.username}
+                    <input style={{margin: 5}} className="form-control" value={account.username}
                            onChange={(e) => setAccount({ ...account,
                                                            username: e.target.value })}/>
-                    <input value={account.password}
+                    <input style={{margin: 5}} className="form-control" value={account.password}
                            onChange={(e) => setAccount({ ...account,
                                                            password: e.target.value })}/>
-                    <input value={account.firstName}
+                    <input style={{margin: 5}} className="form-control" value={account.firstName}
                            onChange={(e) => setAccount({ ...account,
                                                            firstName: e.target.value })}/>
-                    <input value={account.lastName}
+                    <input style={{margin: 5}} className="form-control" value={account.lastName}
                            onChange={(e) => setAccount({ ...account,
                                                            lastName: e.target.value })}/>
-                    <input value={account.dob}
+                    <input style={{margin: 5}} className="form-control" value={account.dob}
                            onChange={(e) => setAccount({ ...account,
                                                            dob: e.target.value })}/>
-                    <input value={account.email}
+                    <input style={{margin: 5}} className="form-control" value={account.email}
                            onChange={(e) => setAccount({ ...account,
                                                            email: e.target.value })}/>
-                    <select onChange={(e) => setAccount({ ...account,
+                    <select style={{margin: 5}} className="form-select" onChange={(e) => setAccount({ ...account,
                                                             role: e.target.value })}>
                         <option value="USER">User</option>
                         <option value="ADMIN">Admin</option>
                         <option value="FACULTY">Faculty</option>
                         <option value="STUDENT">Student</option>
                     </select>
-                    <button onClick={update}>
+                    <button style={{margin: 5}}  className="btn btn-warning" onClick={update}>
                         Update
                     </button>
                 </div>

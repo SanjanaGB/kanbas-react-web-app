@@ -13,6 +13,7 @@ export const signin = async (credentials) => {
 
 export const account = async () => {
     const response = await request.post(`${USERS_API}/account`);
+    console.log(response);
     return response.data;
 };
 

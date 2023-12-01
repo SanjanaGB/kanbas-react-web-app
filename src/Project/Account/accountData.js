@@ -24,10 +24,11 @@ function AccountData() {
 
     useEffect(() => {
         if (id) {
-            console.log("XXXX");
             findUserById(id);
+
         } else {
             fetchAccount();
+
         }
     }, []);
 
@@ -43,35 +44,35 @@ function AccountData() {
             </div>
             {account && (
                 <div>
-                    <input value={account.username}
+                    <input style={{margin: 5}} className="form-control" placeholder="Username" value={account.username}
                            onChange={(e) => setAccount({ ...account,
                                                            username: e.target.value })}/>
-                    <input value={account.password}
+                    <input style={{margin: 5}} className="form-control" placeholder="Password" value={account.password}
                            onChange={(e) => setAccount({ ...account,
                                                            password: e.target.value })}/>
-                    <input value={account.firstName}
+                    <input style={{margin: 5}} className="form-control" placeholder="First Name" value={account.firstName}
                            onChange={(e) => setAccount({ ...account,
                                                            firstName: e.target.value })}/>
-                    <input value={account.lastName}
+                    <input style={{margin: 5}} className="form-control" placeholder="Last Name" value={account.lastName}
                            onChange={(e) => setAccount({ ...account,
                                                            lastName: e.target.value })}/>
-                    <input value={account.dob}
+                    <input style={{margin: 5}} className="form-control" placeholder="DOB" value={account.dob}
                            onChange={(e) => setAccount({ ...account,
                                                            dob: e.target.value })}/>
-                    <input value={account.email}
+                    <input style={{margin: 5}} className="form-control" placeholder="Email" value={account.email}
                            onChange={(e) => setAccount({ ...account,
                                                            email: e.target.value })}/>
-                    <select onChange={(e) => setAccount({ ...account,
+                    <select style={{margin: 5}} className="form-select" onChange={(e) => setAccount({ ...account,
                                                             role: e.target.value })}>
                         <option value="USER">User</option>
                         <option value="ADMIN">Admin</option>
                         <option value="FACULTY">Faculty</option>
                         <option value="STUDENT">Student</option>
                     </select>
-                    <button onClick={save}>
+                    <button style={{margin: 5}} className="btn btn-primary" onClick={save}>
                         Save
                     </button>
-                    <button onClick={signout}>
+                    <button style={{margin: 5, textAlign: "center"}} className="btn btn-danger" onClick={signout}>
                         Sign-out
                     </button>
                 </div>

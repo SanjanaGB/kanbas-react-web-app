@@ -11,9 +11,9 @@ function Signin() {
     return (
         <div>
             <h1>Signin</h1>
-            <input value={credentials.username} onChange={(e) => setCredentials({...credentials, username: e.target.value})}/>
-            <input value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})}/>
-            <button onClick={signin}> Signin </button>
+            <input style={{margin: 5}}  className="form-control" value={credentials.username} onChange={(e) => setCredentials({...credentials, username: e.target.value})}/>
+            <input style={{margin: 5}}  className="form-control" value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})}/>
+            <button style={{margin: 5, textAlign: "center"}}  className="btn btn-primary" onClick={signin}> Signin </button>
         </div>
     );
 }
